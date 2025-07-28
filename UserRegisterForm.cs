@@ -32,8 +32,7 @@ namespace _2048WinFormsApp
             else 
             {
                 User user = new User(nameTextBox.Text);
-                FileWorker.AddUser(user);
-                // СОХРАНИ ПОЛЬЗОВАТЕЛЯ В СТАТИЧЕСКОЕ ПОЛЕ КАКОГО-НИБУДЬ КЛАССА
+                GameForm.user = user;
                 new GameForm().Show();
                 this.Close();
             }

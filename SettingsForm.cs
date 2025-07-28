@@ -27,7 +27,7 @@ namespace _2048WinFormsApp
                 MessageBox.Show("Нужно ввести число больше 3 и меньше 9", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else 
             {
-                // СДЕЛАЙ ЛОГИКУ ПРИСВАИВАНИЯ РАЗМЕРНОСТИ
+                GameForm.size = count;
                 MessageBox.Show("Размер поля изменён", "Удачно", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
