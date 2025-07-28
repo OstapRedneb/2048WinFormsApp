@@ -6,22 +6,22 @@ namespace _2048WinFormsApp
         {
             InitializeComponent();
         }
-        public void MainMenuForm_Load(object sender, EventArgs e)
+        private void MainMenuForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        public void startButton_Click(object sender, EventArgs e)
+        private void startButton_Click(object sender, EventArgs e)
         {
             new GameForm().Show();
             this.Close();
         }
-        public void resultsButton_Click(object sender, EventArgs e)
+        private void resultsButton_Click(object sender, EventArgs e)
         {
             new ResultsForm().Show();
             this.Close();
         }
-        public void settingsButton_Click(object sender, EventArgs e)
+        private void settingsButton_Click(object sender, EventArgs e)
         {
             new SettingsForm().Show();
             this.Close();

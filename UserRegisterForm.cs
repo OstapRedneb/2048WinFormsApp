@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2048ClassLibrary;
 
 namespace _2048WinFormsApp
 {
@@ -15,6 +16,27 @@ namespace _2048WinFormsApp
         public UserRegisterForm()
         {
             InitializeComponent();
+        }
+
+        private void userLabel_Click(object sender, EventArgs e)
+        {
+
+        } // Не трожь!
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(nameTextBox.Text))
+            {
+                MessageBox.Show("Неверный ввод. Пожалуйста введите имя", "Неверный ввод", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            {
+                User user = new User(nameTextBox.Text);
+                FileWorker.AddUser(user);
+                // СОХРАНИ ПОЛЬЗОВАТЕЛЯ В СТАТИЧЕСКОЕ ПОЛЕ КАКОГО-НИБУДЬ КЛАССА
+                new GameForm().Show();
+                this.Close();
+            }
         }
     }
 }
