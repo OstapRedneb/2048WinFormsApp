@@ -25,7 +25,7 @@ namespace _2048WinFormsApp
                 MessageBox.Show("Нужно ввести число", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (count < 4 || count > 8)
                 MessageBox.Show("Нужно ввести число больше 3 и меньше 9", "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else 
+            else
             {
                 GameForm.size = count;
                 MessageBox.Show("Размер поля изменён", "Удачно", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -34,13 +34,19 @@ namespace _2048WinFormsApp
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            FileWorker.Clear();
+            DialogResult result = MessageBox.Show("Вы точно хотите стереть результаты предыдущих игроков?", "Warning!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK) FileWorker.Clear();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             new MainMenuForm().Show();
             this.Close();
+        }
+
+        private void SettingsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

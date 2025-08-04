@@ -21,7 +21,10 @@ namespace _2048WinFormsApp
         private void ResultsForm_Load(object sender, EventArgs e)
         {
             List<User> users = FileWorker.GetUsersList();
-            bestResultLabel.Text = string.Join("\n", GetBestUsers(users));
+            List<User> bestUsers = GetBestUsers(users);
+            bestUsers.Sort();
+            bestUsers.Reverse();
+            bestResultLabel.Text = string.Join("\n", bestUsers);
             resultsLabel.Text = string.Join ("\n", users);
         }
 

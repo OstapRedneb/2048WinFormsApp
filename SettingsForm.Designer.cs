@@ -140,6 +140,7 @@
             Controls.Add(showLabel);
             Name = "SettingsForm";
             Text = "SettingsForm";
+            Load += SettingsForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

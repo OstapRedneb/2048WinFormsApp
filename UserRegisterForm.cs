@@ -29,13 +29,18 @@ namespace _2048WinFormsApp
             {
                 MessageBox.Show("Неверный ввод. Пожалуйста введите имя", "Неверный ввод", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else 
+            else
             {
                 User user = new User(nameTextBox.Text);
                 GameForm.user = user;
                 new GameForm().Show();
-                this.Close();
+                this.Hide();
             }
+        }
+
+        private void UserRegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

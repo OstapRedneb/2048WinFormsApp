@@ -83,6 +83,7 @@
             Controls.Add(userLabel);
             Name = "UserRegisterForm";
             Text = "2048 Игра";
+            Load += UserRegisterForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
