@@ -63,7 +63,7 @@ namespace _2048WinFormsApp
             if (HasEmptyLabel())
             {
                 List<int> numbers = CreateNumberList();
-                int randomPlaceIndex = new Random().Next(0, numbers.Count - 1);
+                int randomPlaceIndex = new Random().Next(0, numbers.Count);
 
                 map[numbers[randomPlaceIndex] / size, numbers[randomPlaceIndex] % size].Text = CreateTwoOrFour().ToString();
                 Update();
@@ -73,7 +73,7 @@ namespace _2048WinFormsApp
 
         public int CreateTwoOrFour()
         {
-            if (new Random().Next(1, 4) < 3) return 2;
+            if (new Random().Next(1, 5) < 4) return 2;
             return 4;
         }
 
