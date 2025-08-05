@@ -153,10 +153,11 @@ namespace _2048WinFormsApp
                     {
                         map[i, j].BackColor = Color.FromArgb(255 / int.Parse(map[i, j].Text) / 10, 255, 255 / int.Parse(map[i, j].Text));
                         if (int.Parse(map[i, j].Text) > 999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 10 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
-                        if (int.Parse(map[i, j].Text) > 9999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 13 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
-                        if (int.Parse(map[i, j].Text) > 99999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 15 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
-                        if (int.Parse(map[i, j].Text) > 999999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 20 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
-                        if (int.Parse(map[i, j].Text) > 9999999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 25 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
+                        else if (int.Parse(map[i, j].Text) > 9999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 13 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
+                        else if (int.Parse(map[i, j].Text) > 99999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 15 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
+                        else if (int.Parse(map[i, j].Text) > 999999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 20 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
+                        else if (int.Parse(map[i, j].Text) > 9999999) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size - 25 * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
+                        else if (int.Parse(map[i, j].Text) < 1000) map[i, j].Font = new Font("Comic Sans MS", 26.75F * 4 / size, FontStyle.Bold, GraphicsUnit.Point, 204);
                     }
                 }
             }
